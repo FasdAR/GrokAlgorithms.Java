@@ -9,7 +9,8 @@ public class Recursion
 
     private static int sumArray(int startIndex, Integer[] array)
     {
-        int sum = array[0];
+        int sum = array[startIndex];
+        startIndex++;
 
         for (int i = startIndex; i < array.length; i++)
         {
@@ -17,7 +18,7 @@ public class Recursion
         }
 
         if (startIndex == array.length)
-            return sum + sumArray(startIndex++, array);
+            return sum + sumArray(startIndex, array);
         else
             return sum;
     }
