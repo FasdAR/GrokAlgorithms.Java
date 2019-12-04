@@ -6,7 +6,15 @@ public class Main
 {
     public static void main(String[] args)
     {
-        exampleBinarySearch();
+        exmapleSumArray();
+    }
+
+    static void exmapleSumArray()
+    {
+        Integer[] array = {0, 10, 20, 50, 60, 80};
+        int sum = Recursion.sumArray(array);
+
+        System.out.println("Sum: " + sum);
     }
 
     static void exampleBinarySearch()
