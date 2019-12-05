@@ -14,6 +14,11 @@ public class Recursion
         return sizeArray(0, array);
     }
 
+    static int getBiggerNumber(Integer[] array)
+    {
+        return getBiggerNumber(array[0], 0, array);
+    }
+
     private static int sumArray(int startIndex, Integer[] array) //0 | 1 | 2 | 3 | 4
     {
         int sum = array[startIndex]; // 0, 10, 20, 50, 60
@@ -43,6 +48,24 @@ public class Recursion
         catch (Exception ex)
         {
             return startIndex;
+        }
+    }
+
+    public static int getBiggerNumber(int bigNumber, int index, Integer[] array)
+    {
+        if (index == sizeArray(array))
+        {
+            return bigNumber;
+        }
+        else
+        {
+            if (array[index] > bigNumber)
+            {
+                bigNumber = array[index];
+            }
+
+            index++;
+            return getBiggerNumber(bigNumber, index, array);
         }
     }
 }

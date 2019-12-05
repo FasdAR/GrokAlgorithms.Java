@@ -7,17 +7,25 @@ public class Main
 {
     public static void main(String[] args)
     {
-        exmapleSizeArray();
-        exmapleSumArray();
+        exampleGetBiggerNumber();
+    }
+
+    static void exampleGetBiggerNumber()
+    {
+        Integer[] array = {825, 800, 500, 20, 830, 80};
+
+        int number = Recursion.getBiggerNumber(array);
+
+        System.out.println("Big Number: " + number);
     }
 
     static void exmapleSizeArray()
     {
         Integer[] array = {0, 10, 20, 50, 60, 80};
 
-        int sum = Recursion.sizeArray(array);
+        int res = Recursion.sizeArray(array);
 
-        System.out.println("Size Array: " + sum);
+        System.out.println("Size Array: " + res);
     }
 
     static void exmapleSumArray()
