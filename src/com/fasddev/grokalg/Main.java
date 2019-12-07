@@ -1,13 +1,28 @@
 package com.fasddev.grokalg;
 
-import java.util.Arrays;
-import java.util.List;
+import javafx.scene.paint.Color;
+
+import java.util.*;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        exampleGetBiggerNumber();
+        exampleQuickSort();
+    }
+
+    static void exampleQuickSort()
+    {
+        Integer[] array = {825, 800, 500, 20, 500, 800, 600, 700, 20, 22, 830, 80};
+
+        Integer[] resultArray = QuickSort.quickSort(array);
+
+        System.out.print("QuickSort Array: ");
+
+        for (Integer value: resultArray)
+        {
+            System.out.print(value.toString() + " ");
+        }
     }
 
     static void exampleGetBiggerNumber()
