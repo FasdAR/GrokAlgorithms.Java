@@ -24,7 +24,7 @@ public class Main
     }
 
     static void testBinarySearchString() {
-        String[] array = new String[]{"Hello", "World", "I GOOD", "Search"};
+        String[] array = new String[]{"Hello", "World", "I Good", "Search"};
         Arrays.sort(array);
 
         String result = new BinarySearch().searchItem(array, "Hello");
