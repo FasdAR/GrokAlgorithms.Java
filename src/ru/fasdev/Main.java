@@ -2,18 +2,33 @@ package ru.fasdev;
 
 import ru.fasdev.firstChapter.BinarySearch;
 
+import java.util.Arrays;
+
 public class Main
 {
     public static void main(String[] args)
     {
-        testBinarySearch();
+        //#region TEST BINARY SEARCH
+        testBinarySearchInt();
+        testBinarySearchString();
+        //#endregion
     }
 
-    static void testBinarySearch() {
-        Integer[] array = new Integer[]{1, 3, 6, 8, 9, 35, 67, 90, 120, 180, 250};
+    static void testBinarySearchInt() {
+        Integer[] array = new Integer[]{5, 6, 20, 30, 10, 12, 15};
+        Arrays.sort(array);
 
-        Integer result = new BinarySearch().searchItem(array, 180);
+        Integer result = new BinarySearch().searchItem(array, 12);
 
-        System.out.println("BINARY_SEARCH RESULT " + result);
+        System.out.println("BINARY_SEARCH RESULT = " + result);
+    }
+
+    static void testBinarySearchString() {
+        String[] array = new String[]{"Hello", "World", "I GOOD", "Search"};
+        Arrays.sort(array);
+
+        String result = new BinarySearch().searchItem(array, "Hello");
+
+        System.out.println("BINARY_SEARCH RESULT = " + result);
     }
 }
