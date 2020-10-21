@@ -1,6 +1,7 @@
 package ru.fasdev;
 
 import ru.fasdev.firstChapter.BinarySearch;
+import ru.fasdev.twoChapter.SelectionSort;
 
 import java.util.Arrays;
 
@@ -12,6 +13,21 @@ public class Main
         testBinarySearchInt();
         testBinarySearchString();
         //#endregion
+
+        //#region TEST SELECTION SORT
+        testSelectionSort();
+        //#endregion
+    }
+
+    static void testSelectionSort() {
+        Integer[] array = new Integer[]{10, 5, 3, 8, 45, 67, 32, 98, 43, 6};
+        Integer[] sortedArray = new SelectionSort().sortedArrayDescending(array);
+
+        System.out.print("SELECTED_SORTED RESULT = { ");
+        for (Integer i: sortedArray) {
+            System.out.print(i + " ");
+        }
+        System.out.print("}");
     }
 
     static void testBinarySearchInt() {
