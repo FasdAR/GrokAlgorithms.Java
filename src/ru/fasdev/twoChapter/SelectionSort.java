@@ -8,19 +8,18 @@ public class SelectionSort
         int countOperation = 0;
 
         for (int i=0; i< array.length; i++) {
-            countOperation ++;
-
             Integer bigIndex = i;
 
             for (int l = i + 1; l < array.length; l++) {
-                countOperation++;
-
+                countOperation += 2;
                 if (array[bigIndex] < array[l]) {
                     bigIndex = l;
                 }
             }
 
+            countOperation++;
             Integer currentItem = array[i];
+
             array[i] = array[bigIndex];
             array[bigIndex] = currentItem;
         }

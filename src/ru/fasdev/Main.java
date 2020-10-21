@@ -20,7 +20,7 @@ public class Main
     }
 
     static void testSelectionSort() {
-        Integer[] array = new Integer[]{10, 5, 3, 8, 100, 65, 45, 67, 32, 98, 43, 6};
+        Integer[] array = new Integer[]{10, 5, 3, 8, 100, 65, 78, 45, 67, 32, 98, 43, 6};
         Integer[] sortedArray = new SelectionSort().sortedArrayDescending(array);
 
         System.out.print("SELECTED_SORTED RESULT = { ");
