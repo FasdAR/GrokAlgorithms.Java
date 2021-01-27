@@ -2,6 +2,15 @@ package chapterOne;
 
 public class BinarySearch
 {
+    public static void main(String[] args)
+    {
+        String[] array = new String[] {"arr", "bff", "ccc"};
+
+        Integer searchPos = BinarySearch.search(array, "ccc");
+
+        System.out.println("SEARCH_POS " + searchPos);
+    }
+
     public static Integer search(Comparable[] array, Comparable itemSearch)
     {
         int indexMin = 0;
@@ -30,6 +39,3 @@ public class BinarySearch
         return null;
     }
 }
-
-//1.1 - 7
-//1.2 - 8
